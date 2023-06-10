@@ -11,8 +11,6 @@ router.get('/', (req, res) => {
       {
         model: Product,
         through: ProductTag
-        // as: 'product_tags',
-        // attributes: ['id', 'product_name', 'price', 'stock'],
       }
     ]
   })
@@ -36,8 +34,6 @@ router.get('/:id', (req, res) => {
       {
         model: Product,
         through: ProductTag
-        // as: 'product_tags',
-        // attributes: ['id', 'product_name', 'price', 'stock'],
       }
     ]
   })
@@ -84,7 +80,6 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
   Tag.destroy({
     where: {
       id: req.params.id
